@@ -1,5 +1,14 @@
 .card-component {
-    height: 35vh;
     background-color: rgb(222, 222, 222);
-    margin: 50px
+    margin: 60px 60px 0px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.member-info {
+    padding: 40px;
+}
+
+.counter-div {
+    padding: 5px;
 }

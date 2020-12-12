@@ -1,0 +1,22 @@
+.name {
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 177, 252);
+    line-height: 1.2em;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+}
+
+.member-information {
+    text-align: left;
+}
+p, ol li {
+    font-size: .8em;
+}
+
+.favorite-movies {
+    margin-top: 20px;
+}
+
+ol li {
+    margin-left: 40px;
+}

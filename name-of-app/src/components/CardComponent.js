@@ -3,6 +3,7 @@ import './CardComponent.css'
 import data from '../data'
 import MemberComponent from './MemberComponent'
 import CounterComponent from './CounterComponent'
+import ButtonsComponent from './ButtonsComponent'
 
 class CardComponent extends Component {
     constructor() {
@@ -11,6 +12,8 @@ class CardComponent extends Component {
             members: [...data],
             index: 0,
         }
+        this.handleNextClick = this.handleNextClick.bind(this)
+        this.handlePreviousClick = this.handlePreviousClick.bind(this)
     }
 
     handleNextClick() {
@@ -34,14 +37,19 @@ class CardComponent extends Component {
         // const mapMembers = this.props.members.map(e => 
         //     return <MemberComponent />)
         return (
-            <div className='card-component'>
-                <div>
-                    <MemberComponent member={this.state.members[this.state.index]} />
-                    <button onClick={(e) => this.handlePreviousClick()}>Previous</button>
-                    <button onClick={(e) => this.handleNextClick()}>Next</button>
+            <div>
+                <div className='card-component'>
+                    <div className="member-info">
+                        <MemberComponent member={this.state.members[this.state.index]} />
+                        {/* <button onClick={(e) => this.handlePreviousClick()}>Previous</button>
+                        <button onClick={(e) => this.handleNextClick()}>Next</button> */}
+                    </div>
+                    <div className="counter-div">
+                        <CounterComponent counter={this.state.index + 1} />
+                    </div>
                 </div>
                 <div>
-                    <CounterComponent counter={this.state.index} />
+                    <ButtonsComponent previous={this.handlePreviousClick} next={this.handleNextClick} />
                 </div>
             </div>
         )

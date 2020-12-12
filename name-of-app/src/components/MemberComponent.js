@@ -1,13 +1,14 @@
 import React from 'react'
+import './MemberComponent.css'
 
 function MemberComponent(props) {
     return (
-        <div>
-            <h2>{`${props.member.name.first} ${props.member.name.last}`}</h2>
-            <p>From: {`${props.member.city} ${props.member.country}`}</p>
-            <p>Job Title: {props.member.title}</p>
-            <p>Employer: {props.member.employer}</p>
-            <p>Favorites Movies</p>
+        <div className="member-information">
+            <h2 className='name'>{`${props.member.name.first} ${props.member.name.last}`}</h2>
+            <p><b>From:</b> {`${props.member.city} ${props.member.country}`}</p>
+            <p><b>Job Title:</b> {props.member.title}</p>
+            <p><b>Employer:</b> {props.member.employer}</p>
+            <p className='favorite-movies'><b>Favorites Movies</b></p>
             <ol>
                 {props.member.favoriteMovies.map(movie => {
                     return <li>{movie}</li>

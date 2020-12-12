@@ -1,0 +1,12 @@
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 60px;
+}
+.button1, .button2 {
+    color: white;
+    border: none;
+    background-color: rgb(36, 36, 36);
+    font-size: 1em;
+    font-weight: 600;
+}

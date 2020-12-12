@@ -1,10 +1,11 @@
 import React from 'react'
+import './CounterComponent.css'
 
-function CounterComponent() {
+function CounterComponent(props) {
     return (
         <div>
             {/* <p>{`${}/25`}</p> */}
-            <p>Counter</p>
+            <p className="counter-text">{`${props.counter}/25`}</p>
         </div>
     )
 }
